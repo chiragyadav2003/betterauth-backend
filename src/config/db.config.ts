@@ -1,7 +1,7 @@
 import * as mongoose from 'mongoose'
 import { MongoClient } from 'mongodb'
 
-const mongoUri = "mongodb://localhost:27017/betterAuth"
+const mongoUri = process.env.MONGO_URI
 
 if (!mongoUri) {
   throw new Error('Missing MONGO_URI in environment variables')
